@@ -1,0 +1,246 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     24-06-2020 22:09:35                          */
+/*==============================================================*/
+
+
+alter table SGS_DICTA 
+   drop foreign key FK_SGS_DICT_SGS_DICTA_SGS_ASIG;
+
+alter table SGS_DICTA 
+   drop foreign key FK_SGS_DICT_SGS_DICTA_SGS_SALA;
+
+alter table SGS_IMPARTE 
+   drop foreign key FK_SGS_IMPA_SGS_IMPAR_SGS_ASIG;
+
+alter table SGS_IMPARTE 
+   drop foreign key FK_SGS_IMPA_SGS_IMPAR_SGS_PROF;
+
+alter table SGS_INSCRIBE 
+   drop foreign key FK_SGS_INSC_SGS_INSCR_SGS_ALUM;
+
+alter table SGS_INSCRIBE 
+   drop foreign key FK_SGS_INSC_SGS_INSCR_SGS_ASIG;
+
+alter table SGS_SALA 
+   drop foreign key FK_SGS_SALA_RELATIONS_SGS_ADMI;
+
+alter table SGS_TIENE 
+   drop foreign key FK_SGS_TIEN_SGS_TIENE_SGS_ASIG;
+
+alter table SGS_TIENE 
+   drop foreign key FK_SGS_TIEN_SGS_TIENE_SGS_BLOQ;
+
+drop table if exists SGS_ADMINISTRADOR;
+
+drop table if exists SGS_ALUMNO;
+
+drop table if exists SGS_ASIGNATURA;
+
+drop table if exists SGS_BLOQUE_HORARIO;
+
+
+alter table SGS_DICTA 
+   drop foreign key FK_SGS_DICT_SGS_DICTA_SGS_ASIG;
+
+alter table SGS_DICTA 
+   drop foreign key FK_SGS_DICT_SGS_DICTA_SGS_SALA;
+
+drop table if exists SGS_DICTA;
+
+
+alter table SGS_IMPARTE 
+   drop foreign key FK_SGS_IMPA_SGS_IMPAR_SGS_PROF;
+
+alter table SGS_IMPARTE 
+   drop foreign key FK_SGS_IMPA_SGS_IMPAR_SGS_ASIG;
+
+drop table if exists SGS_IMPARTE;
+
+
+alter table SGS_INSCRIBE 
+   drop foreign key FK_SGS_INSC_SGS_INSCR_SGS_ASIG;
+
+alter table SGS_INSCRIBE 
+   drop foreign key FK_SGS_INSC_SGS_INSCR_SGS_ALUM;
+
+drop table if exists SGS_INSCRIBE;
+
+drop table if exists SGS_PROFESOR;
+
+
+alter table SGS_SALA 
+   drop foreign key FK_SGS_SALA_RELATIONS_SGS_ADMI;
+
+drop table if exists SGS_SALA;
+
+
+alter table SGS_TIENE 
+   drop foreign key FK_SGS_TIEN_SGS_TIENE_SGS_ASIG;
+
+alter table SGS_TIENE 
+   drop foreign key FK_SGS_TIEN_SGS_TIENE_SGS_BLOQ;
+
+drop table if exists SGS_TIENE;
+
+/*==============================================================*/
+/* Table: SGS_ADMINISTRADOR                                     */
+/*==============================================================*/
+create table SGS_ADMINISTRADOR
+(
+   SAD_RUT              varchar(20) not null  comment '',
+   SAD_NOMBRE           varchar(30) not null  comment '',
+   SAD_PATERNO          varchar(30) not null  comment '',
+   SAD_MATERNO          varchar(30) not null  comment '',
+   SAD_CORREO           varchar(50) not null  comment '',
+   SAD_TELEFONO         int not null  comment '',
+   primary key (SAD_RUT)
+);
+
+/*==============================================================*/
+/* Table: SGS_ALUMNO                                            */
+/*==============================================================*/
+create table SGS_ALUMNO
+(
+   SAL_RUT              varchar(20) not null  comment '',
+   SAL_NOMBRE           varchar(30) not null  comment '',
+   SAL_PATERNO          varchar(30) not null  comment '',
+   SAL_MATERNO          varchar(30)  comment '',
+   SAL_CORREO           varchar(40) not null  comment '',
+   SAL_CARRERA          varchar(60) not null  comment '',
+   SAL_TELEFONO         int not null  comment '',
+   primary key (SAL_RUT)
+);
+
+/*==============================================================*/
+/* Table: SGS_ASIGNATURA                                        */
+/*==============================================================*/
+create table SGS_ASIGNATURA
+(
+   SA_ID                int not null  comment '',
+   SA_NOMBRE            varchar(30) not null  comment '',
+   SA_CUPOS             int  comment '',
+   SA_INSCRITOS         int  comment '',
+   primary key (SA_ID)
+);
+
+/*==============================================================*/
+/* Table: SGS_BLOQUE_HORARIO                                    */
+/*==============================================================*/
+create table SGS_BLOQUE_HORARIO
+(
+   SBH_ID               int not null  comment '',
+   SBH_DIA              varchar(20) not null  comment '',
+   SBH_BLOQUE           varchar(30) not null  comment '',
+   primary key (SBH_ID)
+);
+
+/*==============================================================*/
+/* Table: SGS_DICTA                                             */
+/*==============================================================*/
+create table SGS_DICTA
+(
+   SA_ID                int not null  comment '',
+   SS_ID                int not null  comment '',
+   primary key (SA_ID, SS_ID)
+);
+
+/*==============================================================*/
+/* Table: SGS_IMPARTE                                           */
+/*==============================================================*/
+create table SGS_IMPARTE
+(
+   SP_RUT          varchar(15) not null  comment '',
+   SA_ID                int not null  comment '',
+    SI_SECCION           int not null  comment ''
+
+);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',620453,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',220146,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',220145,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',620454,1);
+
+
+/*==============================================================*/
+/* Table: SGS_INSCRIBE                                          */
+/*==============================================================*/
+create table SGS_INSCRIBE
+(
+   SA_ID                int not null  comment '',
+   SAL_RUT              varchar(20) not null  comment '',
+   primary key (SA_ID, SAL_RUT)
+);
+
+/*==============================================================*/
+/* Table: SGS_PROFESOR                                          */
+/*==============================================================*/
+create table SGS_PROFESOR
+(
+   SP_RUT          varchar(15) not null  comment '',
+   SP_NOMBRE            varchar(30) not null  comment '',
+   SP_PATERNO           varchar(30) not null  comment '',
+   SP_MATERNO           varchar(30)  comment '',
+   SP_CORREO            varchar(50) not null  comment '',
+   SP_TELEFONO          int not null  comment '',
+   SP_PREFERENCIA       varchar(20)  comment '',
+   primary key (SP_RUT)
+);
+
+/*==============================================================*/
+/* Table: SGS_SALA                                              */
+/*==============================================================*/
+create table SGS_SALA
+(
+   SS_ID                int not null  comment '',
+   SAD_RUT              varchar(20) not null  comment '',
+   SS_TIPO              varchar(30) not null  comment '',
+   primary key (SS_ID)
+);
+
+/*==============================================================*/
+/* Table: SGS_TIENE                                             */
+/*==============================================================*/
+create table SGS_TIENE
+(
+   SA_ID                int not null  comment '',
+   SBH_ID               int not null  comment '',
+   ST_TIPO              varchar(20) not null  comment '',
+   primary key (SA_ID, SBH_ID)
+);
+
+
+
+alter table SGS_DICTA add constraint FK_SGS_DICT_SGS_DICTA_SGS_ASIG foreign key (SA_ID)
+      references SGS_ASIGNATURA (SA_ID) on delete restrict on update restrict;
+
+alter table SGS_DICTA add constraint FK_SGS_DICT_SGS_DICTA_SGS_SALA foreign key (SS_ID)
+      references SGS_SALA (SS_ID) on delete restrict on update restrict;
+
+alter table SGS_IMPARTE add constraint FK_SGS_IMPA_SGS_IMPAR_SGS_ASIG foreign key (SA_ID)
+      references SGS_ASIGNATURA (SA_ID) on delete restrict on update restrict;
+
+alter table SGS_IMPARTE add constraint FK_SGS_IMPA_SGS_IMPAR_SGS_PROF foreign key (SP_RUT)
+      references SGS_PROFESOR (SP_RUT) on delete restrict on update restrict;
+
+alter table SGS_INSCRIBE add constraint FK_SGS_INSC_SGS_INSCR_SGS_ALUM foreign key (SAL_RUT)
+      references SGS_ALUMNO (SAL_RUT) on delete restrict on update restrict;
+
+alter table SGS_INSCRIBE add constraint FK_SGS_INSC_SGS_INSCR_SGS_ASIG foreign key (SA_ID)
+      references SGS_ASIGNATURA (SA_ID) on delete restrict on update restrict;
+
+alter table SGS_SALA add constraint FK_SGS_SALA_RELATIONS_SGS_ADMI foreign key (SAD_RUT)
+      references SGS_ADMINISTRADOR (SAD_RUT) on delete restrict on update restrict;
+
+
+alter table SGS_TIENE add constraint FK_SGS_TIEN_SGS_TIENE_SGS_ASIG foreign key (SA_ID)
+      references SGS_ASIGNATURA (SA_ID) on delete restrict on update restrict;
+
+alter table SGS_TIENE add constraint FK_SGS_TIEN_SGS_TIENE_SGS_BLOQ foreign key (SBH_ID)
+      references SGS_BLOQUE_HORARIO (SBH_ID) on delete restrict on update restrict;
+
+
+
+
+
+
+

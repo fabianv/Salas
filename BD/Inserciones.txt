@@ -1,0 +1,96 @@
+#ALUMNOS
+
+INSERT INTO `sgs_2`.`sgs_alumno` (`SAL_RUT`, `SAL_NOMBRE`, `SAL_PATERNO`, `SAL_MATERNO`, `SAL_CORREO`, `SAL_CARRERA`, `SAL_TELEFONO`) VALUES ('18965897-6', 'PAZ', 'HERRERA', 'GAVILAN', 'PHERRERAG@GMAIL.COM', 'INGENIERIA CIVIL EN AUTOMATIZACION', '968748564');
+INSERT INTO `sgs_2`.`sgs_alumno` (`SAL_RUT`, `SAL_NOMBRE`, `SAL_PATERNO`, `SAL_MATERNO`, `SAL_CORREO`, `SAL_CARRERA`, `SAL_TELEFONO`) VALUES ('19534006-4', 'ESTEBAN', 'COLOMA', 'SUAREZ', 'ECOLAMAS@GMAIL.COM', 'INGENIERIA COMERCIAL', '958471254');
+INSERT INTO `sgs_2`.`sgs_alumno` (`SAL_RUT`, `SAL_NOMBRE`, `SAL_PATERNO`, `SAL_MATERNO`, `SAL_CORREO`, `SAL_CARRERA`, `SAL_TELEFONO`) VALUES ('19587254-6', 'PABLO', 'VELOZO', 'ARAYA', 'PVELOZOA@GMAIL.COM', 'INGENIERIA CIVIL INFORMATICA', '958745424');
+INSERT INTO `sgs_2`.`sgs_alumno` (`SAL_RUT`, `SAL_NOMBRE`, `SAL_PATERNO`, `SAL_MATERNO`, `SAL_CORREO`, `SAL_CARRERA`, `SAL_TELEFONO`) VALUES ('19654897-6', 'LEANDRO', 'MILANESE', 'CHARLIN', 'LMILANESEC@GMAIL.COM', 'INGENIERIA CIVIL INDUSTRIAL', '956258725');
+
+
+#ASIGNATURA
+
+INSERT INTO `sgs_2`.`sgs_asignatura` (`SA_ID`, `SA_NOMBRE`, `SA_CUPOS`, `SA_INSCRITOS`) VALUES ('220145', 'ÁLGEBRA LINEAL', '2', '0');
+INSERT INTO `sgs_2`.`sgs_asignatura` (`SA_ID`, `SA_NOMBRE`, `SA_CUPOS`, `SA_INSCRITOS`) VALUES ('220146', 'CÁLCULO INTEGRAL', '2', '0');
+INSERT INTO `sgs_2`.`sgs_asignatura` (`SA_ID`, `SA_NOMBRE`, `SA_CUPOS`, `SA_INSCRITOS`) VALUES ('620453', 'SISTEMAS OPERATIVOS', '2', '0');
+INSERT INTO `sgs_2`.`sgs_asignatura` (`SA_ID`, `SA_NOMBRE`, `SA_CUPOS`, `SA_INSCRITOS`) VALUES ('620454', 'NTELIGENCIA ARTIFICIAL', '2', '0');
+
+
+#BLOQUE HORARIO
+
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('1', 'LUNES', '08:10-09:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('2', 'LUNES', '09:40-11:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('3', 'LUNES', '11:10-12:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('4', 'LUNES', '12:40-14:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('5', 'LUNES', '14:10-15:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('6', 'LUNES', '15:40-17:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('7', 'LUNES', '17:10-18:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('8', 'LUNES', '18:40-20:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('9', 'MARTES', '08:10-09:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('10', 'MARTES', '09:40-11:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('11', 'MARTES', '11:10-12:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('12', 'MARTES', '12:40-14:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('13', 'MARTES', '14:10-15:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('14', 'MARTES', '15:40-17:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('15', 'MARTES', '17:10-18:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('16', 'MARTES', '18:40-20:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('17', 'MIERCOLES', '08:10-09:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('18', 'MIERCOLES', '09:40-11:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('19', 'MIERCOLES', '11:10-12:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('20', 'MIERCOLES', '12:40-14:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('21', 'MIERCOLES', '14:10-15:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('22', 'MIERCOLES', '15:40-17:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('23', 'MIERCOLES', '17:10-18:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('24', 'MIERCOLES', '18:40-20:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('25', 'JUEVES', '08:10-09:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('26', 'JUEVES', '09:40-11:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('27', 'JUEVES', '11:10-12:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('28', 'JUEVES', '12:40-14:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('29', 'JUEVES', '14:10-15:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('30', 'JUEVES', '15:40-17:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('31', 'JUEVES', '17:10-18:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('32', 'JUEVES', '18:40-20:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('33', 'VIERNES', '08:10-09:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('34', 'VIERNES', '09:40-11:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('35', 'VIERNES', '11:10-12:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('36', 'VIERNES', '12:40-14:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('37', 'VIERNES', '14:10-15:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('38', 'VIERNES', '15:40-17:00');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('39', 'VIERNES', '17:10-18:30');
+INSERT INTO `sgs_2`.`sgs_bloque_horario` (`SBH_ID`, `SBH_DIA`, `SBH_BLOQUE`) VALUES ('40', 'VIERNES', '18:40-20:00');
+
+#PROFESOR
+
+INSERT INTO `sgs_2`.`sgs_profesor` (`SP_RUT`, `SP_NOMBRE`, `SP_PATERNO`, `SP_MATERNO`, `SP_CORREO`, `SP_TELEFONO`, `SP_PREFERENCIA`) VALUES ('11456874-9', 'JAVIERA', 'SUAREZ', 'PINTO', 'JSUAREZP@CORREO.CL', '958421594', 'MAÑANA');
+INSERT INTO `sgs_2`.`sgs_profesor` (`SP_RUT`, `SP_NOMBRE`, `SP_PATERNO`, `SP_MATERNO`, `SP_CORREO`, `SP_TELEFONO`, `SP_PREFERENCIA`) VALUES ('12568004-4', 'JAVIER', 'MACAYA', 'LOPEZ', 'JMACAYAL@CORREO.CL', '958451245', 'TARDE');
+INSERT INTO `sgs_2`.`sgs_profesor` (`SP_RUT`, `SP_NOMBRE`, `SP_PATERNO`, `SP_CORREO`, `SP_TELEFONO`, `SP_PREFERENCIA`) VALUES ('24562874-5', 'JOHN', 'CLOID', 'JCLOID@CORREO.CL', '965254814', 'MEDIO-DIA');
+
+#SALAS
+
+INSERT INTO `sgs_2`.`sgs_sala` (`SS_ID`, `SAD_RUT`, `SS_TIPO`) VALUES ('101', '14587852-3', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_sala` (`SS_ID`, `SAD_RUT`, `SS_TIPO`) VALUES ('102', '14587852-3', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_sala` (`SS_ID`, `SAD_RUT`, `SS_TIPO`) VALUES ('202', '14587852-3', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_sala` (`SS_ID`, `SAD_RUT`, `SS_TIPO`) VALUES ('305', '14587852-3', 'PRACTICA');
+
+#IMPARTE
+
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',620453,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',220146,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',220145,1);
+INSERT INTO SGS_IMPARTE (SP_RUT,SA_ID,SI_SECCION) VALUES ('12568004-4',620454,1);
+
+#TIENE
+
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('220145', '28', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('220145', '7', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('220146', '25', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('220146', '13', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('220146', '33', 'PRACTICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('620454', '10', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('620454', '22', 'TEORICA');
+INSERT INTO `sgs_2`.`sgs_tiene` (`SA_ID`, `SBH_ID`, `ST_TIPO`) VALUES ('620454', '7', 'PRACTICA');
+
+#DICTA
+
+INSERT INTO `sgs_2`.`sgs_dicta` (`SA_ID`, `SS_ID`) VALUES ('620454', '101');
+INSERT INTO `sgs_2`.`sgs_dicta` (`SA_ID`, `SS_ID`) VALUES ('220146', '102');
+INSERT INTO `sgs_2`.`sgs_dicta` (`SA_ID`, `SS_ID`) VALUES ('220146', '202');
+

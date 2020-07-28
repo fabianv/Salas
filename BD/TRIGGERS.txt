@@ -1,0 +1,82 @@
+/*==============================================================*/
+/* TRIGGER 1: PROFESOR NO PUEDE IMPARTIR MAS DE 3 ASIGNATURAS                                             */
+/*==============================================================*/
+
+
+DELIMITER @@
+DROP TRIGGER IF EXISTS T1_MAXIMO_PROFESOR 
+DELIMITER @@
+CREATE TRIGGER T1_MAXIMO_PROFESOR  
+AFTER INSERT ON SGS_IMPARTE 
+FOR EACH ROW 
+BEGIN
+    DECLARE RUT INT; 
+    
+    select count(sa_id) INTO RUT
+    from contador
+    WHERE SP_RUT = NEW.SP_RUT
+    GROUP BY SP_RUT;
+
+    IF RUT>3 THEN 
+      SIGNAL SQLSTATE '20000' 
+          set MESSAGE_TEXT = 'Error, ya hay  3 registros!';
+    end if;
+end;
+DELIMITER;
+
+DROP VIEW CONTADOR
+CREATE VIEW CONTADOR AS(
+SELECT DISTINCT SA_ID,SP_RUT
+FROM SGS_IMPARTE
+)
+select count(sa_id) AS RAMOS from contador WHERE SP_RUT = NEW.SP_RUT group by SP_RUT
+
+
+SELECT DISTINCT SA_ID,SP_RUT
+FROM SGS_IMPARTE
+
+)
+
+
+/*==============================================================*/
+/* TRIGGER 2: CHOQUE DE HORARIOS                                            */
+/*==============================================================*/
+
+DELIMITER @@
+DROP TRIGGER IF EXISTS T2_CHOQUE_HORARIO
+DELIMITER @@
+CREATE TRIGGER T2_CHOQUE_HORARIO
+AFTER INSERT ON SGS_IMPARTE 
+FOR EACH ROW 
+BEGIN
+    DECLARE RUT INT; 
+    
+    select count(sa_id) INTO RUT
+    from contador
+    WHERE SP_RUT = NEW.SP_RUT
+    GROUP BY SP_RUT;
+
+    IF RUT>3 THEN 
+      SIGNAL SQLSTATE '20000' 
+          set MESSAGE_TEXT = 'Error, ya hay  3 registros!';
+    end if;
+end;
+DELIMITER;
+
+
+SELECT DISTINCT A.SA_ID,B.SBH_BLOQUE
+FROM SGS_IMPARTE I ,SGS_TIENE T,SGS_ASIGNATURA A,SGS_BLOQUE_HORARIO B
+WHERE  I.SA_ID = A.SA_ID AND A.SA_ID = T.SA_ID AND T.SBH_ID = B.SBH_ID
+
+
+
+
+
+
+  
+/*==============================================================*/
+/* TRIGGER 2: VER HORARIO                                         */
+/*==============================================================*/
+SELECT DISTINCT A.SA_ID,B.SBH_BLOQUE,T.ST_TIPO,P.SP_NOMBRE
+FROM SGS_IMPARTE I ,SGS_TIENE T,SGS_ASIGNATURA A,SGS_BLOQUE_HORARIO B,SGS_PROFESOR P
+WHERE  P.SP_RUT = I.SP_RUT AND I.SA_ID = A.SA_ID AND A.SA_ID = T.SA_ID AND T.SBH_ID = B.SBH_ID
