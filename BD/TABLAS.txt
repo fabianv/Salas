@@ -111,7 +111,15 @@ create table SGS_ALUMNO
    SAL_TELEFONO         int not null  comment '',
    primary key (SAL_RUT)
 );
+/*==============================================================*/
+/* Table: SGS_DICTA                                             */
+/*==============================================================*/
+create table SGS_CONTADOR
+(
+   SC_ASISTENTES         int not null  comment '',
+   SC_FECHA               timestamp,
 
+);
 /*==============================================================*/
 /* Table: SGS_ASIGNATURA                                        */
 /*==============================================================*/
